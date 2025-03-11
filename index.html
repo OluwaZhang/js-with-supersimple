@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>supersimpledev</title>
+</head>
+<body>
+    <main>
+<!--         <button onclick="
+            console.log(`cart quantity : ${cartQuantity}`)
+            ">show quantity
+        </button>
+
+        <button onclick="
+            cartQuantity = cartQuantity + 1
+            console.log(`cart quantity : ${cartQuantity}`)
+        ">add to cart</button>
+
+        <button  onclick="
+            cartQuantity = cartQuantity + 2
+            console.log(`cart quantity : ${cartQuantity}`)  
+        ">
+            +2
+        </button>
+
+        <button onclick="
+            cartQuantity = cartQuantity + 3
+            console.log(`cart quantity : ${cartQuantity}`)
+        ">
+            +3
+        </button>
+
+        <button
+         onclick="
+            cartQuantity = 0
+            console.log(`cart quantity has been reset`)
+            console.log(`cart quantity : ${cartQuantity}`)
+        ">reset cart</button> -->
+
+        <h1>rock paper scissors</h1>
+        <button onclick="
+           computerMove = computerPick()
+
+             results = '';
+
+           if (computerMove === 'rock') {
+             results = 'its a tie';
+           } else if(computerMove === 'paper'){
+             results = 'you win';
+           } else if (computerMove = 'scissors') {
+             results = 'you lose';
+           }
+
+           alert(results)
+        ">rock</button><br><br><br><br>
+
+
+        <button onclick="
+         computerMove = computerPick()
+
+          results = '';
+
+        if (computerMove === 'rock') {
+          results = 'you win';
+        } else if(computerMove === 'paper'){
+          results = 'its a tie';
+        } else if (computerMove = 'scissors') {
+          results = 'you lose';
+        }
+
+        alert(results)
+     ">paper</button><br><br><br><br>
+
+
+        <button 
+        onclick="
+         computerMove = computerPick()
+
+          results = '';
+
+        if (computerMove === 'rock') {
+          results = 'you win';
+        } else if(computerMove === 'paper'){
+          results = 'you lose';
+        } else if (computerMove = 'scissors') {
+          results = 'its a tie';
+        }
+
+        alert(results)
+     ">scissors</button><br><br><br><br>
+
+        <button>time</button><br>
+    </main>
+
+    <script>
+        // const hour =Math.round(Math.random() * 24)
+        // const name = "John"
+
+        // console.log(hour);
+        
+        // if (hour >= 0 && hour < 12) {
+        //     console.log(`good morning ${name}`);
+        //     alert(`good morning ${name}`)  
+        // }else if (hour >= 12 && hour < 17) {
+        //     console.log(`good afternoon ${name}`);
+        //     alert(`good afternoon ${name}`)
+        // }else if (hour >= 17 && hour < 24 ) {
+        //     console.log(`good evening ${name}`);
+        //     alert(`good evening ${name}`)
+        // }
+
+
+        function computerPick (){
+            const computer = Math.ceil(Math.random() * 3);
+            console.log(computer);
+            let computerMove = '';
+
+            if (computer === 1) {
+                computerMove = 'rock';
+            } else if (computer === 2) {
+                computerMove = 'paper';
+            } else {
+                computerMove = 'scissors';
+            }
+
+            console.log(computerMove);
+            return computerMove;
+
+        }
+
+        let computerMove = computerPick()
+
+        let results = '';
+        
+        
+    </script>
+</body>
+</html>
