@@ -39,56 +39,13 @@
         ">reset cart</button> -->
 
         <h1>rock paper scissors</h1>
-        <button onclick="
-           computerMove = computerPick()
-
-             results = '';
-
-           if (computerMove === 'rock') {
-             results = 'its a tie';
-           } else if(computerMove === 'paper'){
-             results = 'you win';
-           } else if (computerMove = 'scissors') {
-             results = 'you lose';
-           }
-
-           alert(results)
-        ">rock</button><br><br><br><br>
+        <button onclick="gamePlay('rock')">rock</button><br><br><br><br>
 
 
-        <button onclick="
-         computerMove = computerPick()
-
-          results = '';
-
-        if (computerMove === 'rock') {
-          results = 'you win';
-        } else if(computerMove === 'paper'){
-          results = 'its a tie';
-        } else if (computerMove = 'scissors') {
-          results = 'you lose';
-        }
-
-        alert(results)
-     ">paper</button><br><br><br><br>
+        <button onclick=" gamePlay('paper')">paper</button><br><br><br><br>
 
 
-        <button 
-        onclick="
-         computerMove = computerPick()
-
-          results = '';
-
-        if (computerMove === 'rock') {
-          results = 'you win';
-        } else if(computerMove === 'paper'){
-          results = 'you lose';
-        } else if (computerMove = 'scissors') {
-          results = 'its a tie';
-        }
-
-        alert(results)
-     ">scissors</button><br><br><br><br>
+        <button onclick=" gamePlay('scissors')">scissors</button><br><br><br><br>
 
         <button>time</button><br>
     </main>
@@ -109,7 +66,44 @@
         //     console.log(`good evening ${name}`);
         //     alert(`good evening ${name}`)
         // }
+        function gamePlay(playerMove) {
+          computerMove = computerPick()
 
+            // results = '';
+            if (playerMove === 'scissors') {  
+                  if (computerMove === 'rock') {
+                results = 'you win';
+                } else if(computerMove === 'paper'){
+                results = 'you lose';
+                } else if (computerMove = 'scissors') {
+                results = 'its a tie';
+                }
+
+                alert(results)      
+            }else if (playerMove === 'paper') {
+                    if (computerMove === 'rock') {
+                    results = 'you win';
+                    } else if(computerMove === 'paper'){
+                    results = 'its a tie';
+                    } else if (computerMove = 'scissors') {
+                    results = 'you lose';
+                    }
+
+                    alert(results)
+              
+            } else if (playerMove === 'rock') {
+                if (computerMove === 'rock') {
+                results = 'its a tie';
+                } else if(computerMove === 'paper'){
+                results = 'you win';
+                } else if (computerMove = 'scissors') {
+                results = 'you lose';
+                }
+
+                alert(results)
+            }
+          
+        }
 
         function computerPick (){
             const computer = Math.ceil(Math.random() * 3);
@@ -126,7 +120,6 @@
 
             console.log(computerMove);
             return computerMove;
-
         }
 
         let computerMove = computerPick()
